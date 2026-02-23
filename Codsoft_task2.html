@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing page</title>
+    <style>
+
+      /* Custom Variables - Easy to change colors later! */
+:root {
+    --bg-dark: #524d99;
+    --card-bg: #1e293b;
+    --accent: #38bdf8; /* Cyber Blue */
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Courier New', monospace; /* Monospace for that 'Coder' feel */
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    position: fixed;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.glass-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.glass-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.tagline {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+
+/* Grid Layout for Projects */
+.project-grid {
+    padding: 5rem 10%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.tech-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.btn {
+    background: var(--accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav">
+        
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="cta-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1><span class="highlight"></span>Arumpavai Manimudichozhan</span></h1>
+             <p>1st Year CSE Student | Passionate about Algorithms, Web Dev, and Open Source.</p>
+            <div class="social-icons">
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="project-grid">
+        <h2 class="section-title">Latest Projects</h2>
+        <div class="container">
+            <article class="card">
+                
+                <h3>Calculator</h3>
+                <p>A robust calculator built in Javascript handling complex arithmetic operations.</p>
+            </article>
+
+            <article class="card">
+                
+                <h3>Personal Site</h3>
+                <p>This exact landing page! Built with semantic HTML and Flexbox.</p>
+                
+            </article>
+
+            <article class="card">
+                
+                <h3>Portfolio Website</h3>
+                <p>My own Portofolio Website built using HTML and CSS</p>
+                
+            </article>
+        </div>
+    </section>
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2>Connect </h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <span class="icon">📧</span>
+                <p><strong>Email:</strong>m.arumpavai@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📍</span>
+                <p><strong>Location:</strong> Chennai / Tamilnadu</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon">💼</span>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/Arumpavai Manimudichozhan</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+        <p>Built with &lt;/&gt; by Arumpavai | 2026</p>
+    </footer>
+
+</body>
+</html>
